@@ -499,8 +499,8 @@ void drawAnimationStateContent() {
         eraseLine_p1 = prev_p1;
         eraseLine_p2 = curr_p1;
         eraseEdge = currentEdge;
-    } else {
-        // Normal case: draw the current black line
+    } else if (!done) {
+        // Normal case: draw the current black line (only if not rejected)
         drawLine(curr_p1, curr_p2, COLOR_BLACK);
     }
 
